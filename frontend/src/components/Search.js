@@ -9,7 +9,8 @@ function Search() {
   const handleSearch = async (e) => {
     e.preventDefault();
     if (!query.trim()) return;
-    const res = await fetch(`https://music-api.onrender.com/api/music/search?query=${query}`);
+
+    const res = await fetch(`https://music-backend.onrender.com/api/music/search?query=${query}`); // Updated URL
     const data = await res.json();
     setResults(data.results);
   };
