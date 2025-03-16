@@ -6,7 +6,7 @@ function Playlist({ user }) {
   const [message, setMessage] = useState('');
 
   const fetchPlaylists = async () => {
-    const res = await fetch('https://music-api.onrender.com/api/playlists');
+    const res = await fetch('https://music-backend.onrender.com/api/playlists'); // Updated URL
     const data = await res.json();
     // Filter playlists to only show those created by the current user
     setPlaylists(data.playlists.filter(p => p.userId === user.id));
@@ -19,7 +19,8 @@ function Playlist({ user }) {
   const createPlaylist = async (e) => {
     e.preventDefault();
     if (!newPlaylistName.trim()) return;
-    const res = await fetch('https://music-api.onrender.com/api/playlists', {
+
+    const res = await fetch('https://music-backend.onrender.com/api/playlists', { // Updated URL
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId: user.id, name: newPlaylistName, songs: [] })
