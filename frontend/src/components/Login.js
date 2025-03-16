@@ -7,7 +7,7 @@ function Login({ setUser }) {
     e.preventDefault();
     if (!name.trim()) return;
 
-    const response = await fetch('https://music-backend-0j4q.onrender.com', { // Updated URL
+    const response = await fetch('https://music-backend-0j4q.onrender.com/api/auth/register', { // Updated URL
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name })
