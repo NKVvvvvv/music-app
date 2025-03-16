@@ -6,7 +6,7 @@ function Home({ user }) {
   const [currentSong, setCurrentSong] = useState(null);
 
   useEffect(() => {
-    fetch('https://music-backend-0j4q.onrender.com') // Updated URL
+    fetch('https://music-backend-0j4q.onrender.com/api/music') // Updated URL
       .then(res => res.json())
       .then(data => setSongs(data.songs));
   }, []);
