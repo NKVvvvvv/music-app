@@ -6,7 +6,8 @@ function Login({ setUser }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!name.trim()) return;
-    const response = await fetch('https://music-api.onrender.com/api/auth/register', {
+
+    const response = await fetch('https://music-backend.onrender.com/api/auth/register', { // Updated URL
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name })
