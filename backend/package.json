@@ -1,7 +1,6 @@
 {
   "name": "music-backend",
   "version": "1.0.0",
-  "description": "Backend API for music app",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
