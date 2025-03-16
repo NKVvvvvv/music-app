@@ -10,7 +10,7 @@ function Search() {
     e.preventDefault();
     if (!query.trim()) return;
 
-    const res = await fetch(`https://music-backend.onrender.com/api/music/search?query=${query}`); // Updated URL
+    const res = await fetch(`https://music-backend-0j4q.onrender.com/api/music/search?query=${query}`); // Updated URL
     const data = await res.json();
     setResults(data.results);
   };
